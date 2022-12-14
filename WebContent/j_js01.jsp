@@ -2,14 +2,46 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Javascript 선언</title>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript 선언</title>
+	<script>
+			alert('head 태그안의 script-internal 방식');
+	</script>
+	</head>
 <body>
 
+
+	<div id="i1"></div>
+	
+		<script>
+		//스크립트 한 줄 주석문
+		/*스크립트 다중 주석문
+			id가 i1인 요소 내부에 text를 출력*/
+			
+			
+			//document객체.속성명 = 값
+			//object HTMLDivElement
+			//document.getElementById("id");
+			//id가 i1 인 요소 내부 = 'body 태그안의 스크립으 - internal 방식';
+			//window.alert('body 태그안의 script-internal 방식');
+			
+			//document.getElementById("i1").id id가 i1인 요소의 id속성의 값을 가져옴
+			//window.alert(document.getElementById("i1").id); //[object HTMLDivElement]
+			
+			//id가 i1인 요소 내부의 text 값을 가져온다.
+			//window.alert(document.getElementById("i1").innerText);
+			
+			
+			 document.getElementById("i1").innerText='이게머지ㅇㅇ'
+
+			</script>
+
+
+
+<hr/>
 <span style="display:inline-block; background: olive; width:100px;" onMouseOver="alert('안녕');">span요소1</span>
-<span style="display:inline-block; background: green; width:100px;" onMouseOut="alert('안녕');">span요소2</span>
+<div style="display:inline-block; background: green; width:100px;" onMouseOut="alert('안녕');">span요소2</div>
 	<form>
 		<input type="button" id="btn1" value="클릭(btn1)" onclick="alert('hi!');">
 	</form>
@@ -50,5 +82,26 @@
        예문<태그명 onClick="함수명(매개변수리스트);"></태그명>
      
   </xmp>
+  <%-- 
+  자바의 클래스에서는 
+			 클래스 참조변수명 = new 클래스명();
+			 
+			 참조변수명.필드명; //해당클래스객체의 필드값 가져오기
+			 참조변수명.필드명=값; //해당클래스 객체의 필드값 설정하기
+			 
+			 그런데 private 필드명이면, 위의 작업이 불가
+			 참조변수명.메서드명(); // 해당클래스 객체의 메서드를 호출
+			 참조변수명.get필드명()을 사용하여 해당클래스객체의 필드값 가져오기
+			 참조변수명.set필드명()을 사용하여 해당클래스 객체의 필드값 설정하기
+			 
+			 자바스크립트에서는 
+			 객체.속성명(필드값); // 해당객체의 필드값 가져오기
+			 객체.속성명(필드값)=값; // 해당 클래스 객체의 필드값 설정하기
+			 객체.메서드명(); //해당객체의 메서드를 호출
+			 
+			 
+			 document.getElementById("i1").innerText //(여기에서는 ) HTML div요소의 innerText속성값 가져오기
+			 document.getElementById("i1").innerText='블러브럴'; // //(여기에서는 ) HTML div요소의 innerText속성값을 블러브럴 설정
+			 document.getElementById("i1"); //document 객체의 getElementById() 메서드 호출--%>
 </body>
 </html>
