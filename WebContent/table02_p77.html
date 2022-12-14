@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>퇴근</title>
+    <meta charset="utf-8" />
+    <!-- internal 방식: html문서안의 head 태그 내부에 style 선언 -->
+    <style>
+      /*
+        선택자 {속성:값; }
+        => selector {property:value; property:value;}
+        table{border-collapse:collapse;}
+         */
+      table,
+      th,
+      td {
+        border-width: 5px;
+        border-style: solid;
+        border-color: greenyellow;
+      }
+      /*p358 border_collapse속성 - 테두리, 통합 분리하기
+                모든 table에 대해서
+                border=collapse:collapse; 
+                표바깥쪽테두리와 안쪽 cell의 테두리 통합
+                table{border-collapse:separate;} 기본 2줄 표바깥쪽테두리와 안쪽 cell의 분리
+                */
+      table tr {
+        border-collapse: collapse;
+      }
+      h2 {
+        border-top: 3px solid red;
+        border-right: 3px solid red;
+        border-bottom: 3px solid red;
+        border-left: 3px solid red;
+      }
+      table tr {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      stmt =conn.prepareStatement(sql);, System.out.println(noticeBoardDAO ()
+      접속) conn=JdbcUtil.connection();, stmt, rs -------------------(table_p77)
+      PraperedStatement stmt= null; Connection conn = null; ResultSet rs = null;
+      String sql = "select nbno,title,contant, writer, cre_date,rcnt, empno"
+      try{ stmt = conn.prepareStatement(sql); rs = stmt.excuteQuery(); }catch {
+      } conn = JdbcUtil.connection();,
+    </h2>
+    <!-- css 박스모델 (p294)
+        padding : border와 컨텐트와의 여백 => 테두리 안쪽여백
+        border : 테두리
+        margin : 요소와 요소사이의 여백 =>  테두리 바깥쪽 여백 -->
+    <!-- cellpadding : cell안의 컨텐트와의 여백
+      border : 테두리. 기본값 0
+        cellspacing : cell과 cell 사이의 여백 -->
+
+    <!-- table 요소 하위 요소 tr이나 td th 요소를 지정할 때는 -->
+    <!-- table의 자식요소 tbody가 존재함 (없으면 자동생성됨) -->
+    <tbody></tbody>
+    <table cellpadding="5" width="400" align="left">
+      <caption>
+        표제목
+      </caption>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>학교수</th>
+          <th>학급수</th>
+          <th>학생수</th>
+          <th>교원수</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>초등학교</td>
+          <td>100</td>
+          <td>200</td>
+          <td>300</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td>중학교</td>
+          <td>300</td>
+          <td>300</td>
+          <td>300</td>
+          <td>400</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>합계</td>
+          <td>400</td>
+          <td>500</td>
+          <td>600</td>
+          <td>800</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

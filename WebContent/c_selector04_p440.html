@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+      ul li:nth-child(odd) {
+        background-color: blueviolet;
+      }
+      /*짝수번째 li요소위에 마우스가 올라가면 흰색글자 스타일로 적용*/
+      ul li:nth-child(2n):hover {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>연결선택자(p421~)</h2>
+    <ul>
+      <li>pseudo-class(p437) : 의사클래스(가상클래스)<br /></li>
+      <li>구조가상클래스(p440)<br /></li>
+      <li>요소명:nth-child(odd) : 홀수번째 요소<br /></li>
+      <li>요소명:nth-child(even) : 짝수번째 요소<br /></li>
+      <li>요소명:nth-child(even) : ???n번째 요소<br /></li>
+      <li>요소명:nth-child(n) : n번째 요소<br /></li>
+      <li>요소명:nth-child(n+3) : n+3번째 요소<br /></li>
+      <li>요소명:nth-child(2n+3) : 3번째 요소부터 2씩 증가<br /></li>
+      <li>요소명:nth-child(-n+3) : 앞에서 3개의 요소를 선택<br /></li>
+      <li>
+        요소명:nth-child(n+3):nth-child(-n+9) : 형제그룹내 3번째 li부터 9번째
+      </li>
+      <li>요소명:nth-child(3n) : n번째 요소<br /></li>
+      <li>하위선택자(p421)=> 상위요소공백하위요소<br /></li>
+      <li>자식선택자(p423)=> 부모요소>자식요소<br /></li>
+      <li>인접형제선택자(p425)=> 요소+요소<br /></li>
+      <li>형제선택자(p427)=> 요소~요소<br /></li>
+    </ul>
+
+    <hr />
+  </body>
+</html>

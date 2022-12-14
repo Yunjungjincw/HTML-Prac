@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <style>
+  
+    *{margin:10px;}
+    #i1 {font: italic 900 24px/48px 궁서체;}
+
+    .c1{color: yellowgreen; text-decoration: underline;}
+    
+    /*
+    h2{font-weight: 100;
+      font-size: 30px;
+      font-family:"맑은 고딕",돋움,굴림; 글꼴} */
+  </style>
+
+
+  </head>
+<body>
+ 
+  <h4> 텍스트  스타일 (p228)</h4>
+  <span class="c1">color:글자색</span>
+  <span class="c1">text-decoration: underline</span><br>
+  <br>
+  <span style="text-decoration:line-through;">text-decoration: </span>
+  <span style="text-decoration: overline;">text-decoration: </span>
+  <span style="text-decoration: none;">★★text-decoration: </span>
+  <hr/>
+
+  <h4> 글꼴관련 스타일(p215)</h4>
+  
+  <div style="letter-spacing: 1em;">font 속성: 글꼴관련 속성을 한꺼번에 묶어 표현</div>
+  <div id="i1">font 속성: 글꼴관련 속성을 한꺼번에 묶어 표현</div>
+  <div style="font-family:'궁서체',돋움,Sans-serif;">font-family, 돋움</div>
+  <div style="font-size: 12px;">default size for normal text</div>
+  <div style="font-weight: 100;">font-weight 폰트 굵기</div>
+  <div style="font-style: italic;">font-style: italic</div>
+  
+  
+  
+  <hr>
+  <h2> 선택자(selector p 194)</h2>
+  <xmp>
+    태그명 : html 문서내의 모든 태그를 선택하여 Style서식
+    #id명 : 지정한 id명을 가진 요소. 
+            id명은 unique.
+    .class명 : 지정한 class명을 가진 요소. 
+     class명은 동일 -> 공통적인 서식
+    * : 전체 선택자. 모든 요소에 적용
+        -> 모든 하위 요소에 한꺼번에 스타일을 적용
+  </xmp>
+</body>
+</html>

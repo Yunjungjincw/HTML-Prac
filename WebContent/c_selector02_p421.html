@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+
+    <title>Document</title>
+    <style>
+      body > ul {
+        border: 1px dotted blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 바깥 ul -->
+    <ul>
+      <p>*팬션예약정보</p>
+      <li>예약방법</li>
+      <!-- 안쪽 ul 시작 -->
+      <ul>
+        <li>통화 예약</li>
+        <li>웹사이트 예약</li>
+      </ul>
+      <!-- 안쪽 ul 끝 -->
+      <li>요금</li>
+      <ul>
+        <li>1인실: 40,000원</li>
+        <li>2인실: 60,000원</li>
+        <li>3인실: 80,000원</li>
+        <li>4인실: 100,000원</li>
+      </ul>
+    </ul>
+    <!-- 바깥 ul -->
+    <h2>연결선택자(p421)</h2>
+    <p>
+      하위선택자[p421] => 상위요소 공백 하위요소 <br />
+      지정한 모든 하위 요소에 스타일 적용
+    </p>
+    <p>
+      자식선택자[p423] => 부모요소 > 자식요소 <br />
+      지정한 자식 요소에 스타일 적용
+    </p>
+    <hr />
+  </body>
+</html>

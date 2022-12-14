@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .pic1 {
+        width: 100px;
+        height: 120px;
+        border: 1px dotted;
+        border-radius: 15px;
+      }
+
+      .pic2 {
+        width: 150px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    *절대경로1=url<img
+      src="https://image.fmkorea.com/files/attach/images/33854530/176/502/045/db89d8739b8abd506c0554113f34fa9e.jpg" />
+    <p />
+    *절대경로2=C:<img src="C:/wepstudy/webwk/imges/box.png" /><br />
+
+    *상대경로1<img src="imges/nothink.jpg" classs="pic1" /> <br />
+
+    *상대경로.1<img src="./imges/nothink.jpg" class="pic1" /> <br />
+
+    *기준파일 C:/wepstudy/webwk/imges/box.png <br />
+    *상대경로..1:<img src="../imges/nothink.jpg" class="pic1" />
+    <br />
+    <br />
+    <br />
+    <hr />
+    <figure>
+      <img src="./imges/nba.jpg" class="pic2" />
+      <img src="./imges/243191.jpg" class="pic2" />
+      <img src="./imges/box.png" class="pic2" />
+      <figcaption>아무거나 사진아무거나 사진아무거나 사진</figcaption>
+    </figure>
+    <h2>이미지 (p94)</h2>
+    <pre>
+      -절대경로 (absolute URL): 전체경로 (full web address)
+      https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css
+      
+      -상대경로 (Relative URL): 부분경로 (기준파일&다른파일)
+
+      -문법
+      img src="필수속성 경로 및 파일명"
+      art="이미지보이지 않을때의 이미지설명"
+      title="이미지설명"
+      width="너비" px%
+      height="세로" px%
+    </pre>
+  </body>
+</html>

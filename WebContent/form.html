@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+    .button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;	/*전환시간 : 0.4초*/
+  cursor: pointer;						/*마우스 모양*/
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+    
+    </style>
+  </head>
+ 
+  <body>
+    <h2>form(p132)</h2>
+    <hr />
+    <form action="ok.html" method="get">
+      <!-- 이름 <input type="text" name="파라미터" value="초기값" /> -->
+      <fieldset>
+      <legend>개인정보</legend>
+      <ul>
+	      <li>
+	      <!--required속성 = 필수속성 , autofocus속성 : 자동으로 포커스위치  -->
+	      <!-- placeholder 속성 : 짧은 도움말  -->
+	      	ID :<input type="text" name="userName" id="userName" size="10" required="required" autofocus="autofocus" placeholder="ID입력" />
+	      </li>
+	      <li>
+	      	Nick :<input type="text" name="nickName" id="nickName" size="20" required="required" />
+	      </li>
+	      <li>
+	      	비번:<input type="password" name="pwd" size="20" required="required" />
+	      </li>
+	      <li>
+	      	<!-- radio는 단일 선택만 가능 -->
+	      	<!-- YES 선택 파라미터 값 : snsYN=Y -->
+	      	<!-- NO 선택 파라미터 값 : snsYN=N -->
+	     		sns수신여부(y/n):
+	     		<input type="radio" name="snsYN" id="snsY" value="Y" checked="checked"/><label for="snsY">YES</label>
+	     		<input type="radio" name="snsYN" id="snsN" value="N"/><label for="snsN">NO</label>
+	     </li>
+	     <li>
+	     <!-- 1개 선택 : hobby=game -->
+	     <!-- 2개 선택 : hobby=game&hobby=coding -->
+	     <!-- 5개 선택 : hobby=game&hobby=sport&hobby=coding&hobby=study&hobby=sleep -->
+	     <!-- 하나의 hobby 변수에 동일한 String 타입의 서로 다른 값 value가 
+	     	저장되므로 JS와 JSP에서는 배열 array로 취급되어 진다. -->
+	    
+	     	취미:
+	     	<input type="checkbox" name="hobby" id="h0" value="game"/>게임
+	     	<input type="checkbox" name="hobby" id="h1" value="sport"/>운동
+	     	<input type="checkbox" name="hobby" id="h2" value="coding"/>코딩
+	     	<input type="checkbox" name="hobby" id="h3" value="study"/>공부
+	     	<input type="checkbox" name="hobby" id="h4" value="sleep"/>잠자기
+	     </li>
+	     <li>
+	     <!-- 단일 및 다중 선택 가능 -->
+	     <!-- 다중선택 -->
+	     <!-- 선택 안함 : loc=0 -->
+	     <!-- 강원도 선택 : &loc=gangwondo& -->
+	     <!-- 다중선택(multiple="multiple") : loc=newyork&loc=seoul&loc=jeju&loc=busan&loc=gangwondo -->
+	     		지역:
+	     			<select name="loc" id="loc" size="10" multiple="multiple">
+	     			<option value="0">선택</option>
+	     			<option value="newyork">뉴욕</option>
+	     			<option value="seoul">서울</option>
+	     			<option value="jeju">제주</option>
+	     			<option value="busan">부산</option>
+	     			<option value="gangwondo">강원도</option>
+	     		</select>
+	     </li>
+	     <li>
+	     	파일찾기:<input type="file" name="imgfile" id="imgfile"/>
+	     </li>
+	     <li>
+	     <!-- imgfile=KakaoTalk_20221120_144510176.jpg&memberNo= -->
+	     <!-- 파일이 넘어가는게 아님. -->
+	     <!-- memberNo= 개발자에게 필요한 정보를 숨겨서 넘긴다. -->
+	     	hidden:<input type="hidden" name="memberNo" id="memberNo" value="9872"/>
+	     </li>
+	     <li>
+	     <!-- 파라미터 값 : etc=파라미터 -->
+	     	비고:<textarea name="etc" id="etc" rows="5"></textarea>
+	     </li>
+	     <li>
+	      	이메일:<input type="email" name="email" id="email" placeholder="abc@email.com"/>
+	     </li>
+	     <li>
+	     		Site:<input type="url" name="siteUrl" id="siteUrl"/>
+	     </li>
+	     <li>
+	     		tel:<input type="tel" name="hp" id="hp"placeholder="010-0000-0000"  pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" />
+	     </li>
+	     <li>
+	     		
+	     </li>
+      </ul>
+      </fieldset>
+      
+      
+      
+      
+      
+      <fieldset>
+      <legend>주문정보 및 배송정보</legend>
+      <ul> <!-- proSearch=computer -->
+      <li>
+      	상품검색:<input type="search" name="proSearch" id="proSearch"/>
+      </li>
+      <li>
+      	주문수량 :<input type="number" name="cnt" id="cnt" value="1" min="0" max="10" step="1">
+      </li>
+      <li> <!-- 컬러 파라미터값 표현 : ProColor=%23000000 -->
+	     	color:<input type="color" name="ProColor" id="proColor">
+	     </li>
+	     <li>
+	     <!-- 크롬과 엣지에서는  최저 0 , 최대 100기본 값 50 -->
+	     	range:<input type="range" name="range" id="range" max="10000" step="2000"/>
+	     </li>
+	     <li>
+	     <!-- 크롬에서는 가능 -->
+	     <!--orderDate=2022-12-01&orderWeek=2022-W51&orderMonth=2022-11 -->
+	     	<input type="date" name="orderDate" id="orderDate" 		/><br/>
+	     	<input type="week" name="orderWeek" id="orderWeek" 		/><br/>
+	     	<input type="month" name="orderMonth" id="orderMonth" /><br/>
+	     	<input type="datetime" name="orderDT" id="orderDT" 		/><br/>
+	     	<input type="datetime-local" id=orderDTLocal"  				/><br/>
+	     </li>
+	     <li>
+	     	진행상태 progress: <progress  name="delProgress" id="delProgress" value="0.99" max="1"></progress>
+	     </li>
+	     <li>
+	     	값이 차지하는 크기표시 (점유율 0~1.0 사용량 0~100% 등)<br/>
+	     	점유율:<meter name="m1" id="m1" value="0.8" max="1"></meter><br/>
+	     	사용량:<meter name="m2" id="m2" value="88" min="0" max="100"></meter><br/>
+	     	트래픽 초과:<meter name="m3" id="m3" value="88" low="30" high="85" min="0" max="100"></meter><br/>
+	     	트래픽:<meter name="m4" id="m4" value="50" optimum="50" min="0" max="100"></meter><br/>
+	     </li>
+      </ul>
+      </fieldset>
+      <input type="image" src="./imges/youtube.png" style="width:100px"/>
+      <input type="submit" value="확인" />
+      <input type="reset" value="취소" />
+      <input type="button" value="버튼"  onclick="alert('안녕! 눈온다!');"/>
+      <br></br>
+      
+      
+      <button type="submit">서브밋</button>
+      
+      <!--p177  input type="image" 넣었을 때 보다 서버에서
+      	훨씬 빨리 읽어와 화면에 버튼을 표시할 수 있다. -->
+      <button type="submit" style="border-style:none;"><img src="./imges/youtube.png" style="width:100px"></button>
+  		<br></br>
+  		
+  		<button class="button button1">Green</button>
+			<button class="button button2">Blue</button>
+  	
+  	
+  	
+  	
+  	
+  	</form>
+      
+      
+       <pre>
+      form요소 action ="요청을 처리할 서버츠 문서" method="post"|
+      get get 방식 =입력한 내용이 주소표시줄에 노출 
+    	post 방식 = > 입력한 내용이 주소표시줄에 노출x , 중요한 데이터 넘길 때 이용
+    </pre>
+  </body>
+</html>

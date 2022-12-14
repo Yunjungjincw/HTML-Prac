@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .link {
+        width: 150px;
+        height: 150px;
+      }
+
+      img {
+        border-width: 0;
+      }
+      a {
+        text-decoration: 0;
+        text-decoration: underline;
+        display: block;
+        width: 400px;
+        height: 200px;
+        border: 1px solid brown;
+        line-height: 50px;
+      } /*밑줄 여부*/
+
+      /* 작성시 주의사항
+      When setting the style for several link states, there are some order rules:
+      a:hover MUST come after a:link and a:visited
+      a:active MUST come after a:hover*/
+      /* unvisited link */
+      a:link {
+        color: red;
+        width: 300px;
+      }
+
+      /* visited link */
+      a:visited {
+        color: green;
+      }
+
+      /* mouse over link */
+      a:hover {
+        color: hotpink;
+        text-decoration: underline;
+        display: inline-block;
+        width: 300px;
+      }
+
+      /* selected link */
+      a:active {
+        color: blue;
+        text-decoration: underline;
+        display: inline-block;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a
+        href="https://www.inflearn.com/?utm_source=naver_brand_pc&utm_medium=cpp&utm_campaign=default_mk&utm_content=homelink&utm_term=%EC%9D%B8%ED%94%84%EB%9F%B0&n_media=27758&n_query=%EC%9D%B8%ED%94%84%EB%9F%B0&n_rank=1&n_ad_group=grp-a001-04-000000018876572&n_ad=nad-a001-04-000000203921018&n_keyword_id=nkw-a001-04-000003361152887&n_keyword=%EC%9D%B8%ED%94%84%EB%9F%B0&n_campaign_type=4&n_contract=tct-a001-04-000000000596441&n_ad_group_type=5&NaPm=ct%3Dl9d191ns%7Cci%3D0zK0002nx4PxTl18V1n2%7Ctr%3Dbrnd%7Chk%3Df60c862f1f692ace0d46003980c35d6ace942785"
+        >inflearn</a
+      >
+    </div>
+    <div>
+      <a href="https://techblog.woowahan.com/2712/" target="_blank"
+        >기술블로그 target="_blank"</a
+      >
+    </div>
+
+    <a href="https://www.gabia.com/" target="_self">가비아 target="_self"</a>
+
+    <a
+      href="https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-west-1.console.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26nc2%3Dh_ct%26region%3Dus-west-1%26src%3Dheader-signin%26state%3DhashArgsFromTB_us-west-1_7c3dc1404a5163cc&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=u0HUq4QBWIwjvWwh9Ju17rKs9xTQHn1EsUNSEu5C-SU&code_challenge_method=SHA-256"></a>
+    <a href="https://news.hada.io/">개발 뉴스</a>
+
+    <a href="https://www.coupang.com/" target="_blank">
+      <img src="/imges/nothink.jpg" class="link" />
+    </a>
+
+    <a href="https://www.google.co.kr/">
+      <img src="/imges/googleimg.png" alt="logo" title="google" />
+    </a>
+
+    <a href="https://www.gabia.com/" target="frm1"
+      >가비아 target="_self ( 특정 프레임)
+    </a>
+
+    <iframe
+      src="https://jquery.com/"
+      name="frm1"
+      id="frm1"
+      width="500"
+      height="350"></iframe>
+
+    <hr />
+
+    <h2>link (p106)</h2>
+    <pre>
+      -절대경로 (absolute URL): 전체경로 (full web address)
+      https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css
+      
+      -상대경로 (Relative URL): 부분경로 (기준파일&다른파일)
+
+     - 문법
+     a href="경로 및 파일명" target ="표시될 위치(현재 창 or 새창)"
+    </pre>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <hr />
+    <p>p태그</p>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h6>h6</h6>
+    <div style="width: 300px; height: 300px; background-color: orange">
+      div tag
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <a href="#TOP"><span>▲ TOP ▲ </span></a>
+    <a href="#TOP"><span>▲ TOP ▲ </span></a>
+    <a href="#TOP"
+      ><span style="width: 300px; height: 300px; background-color: orange"
+        >▲ 300 pxorange TOP ▲
+      </span></a
+    >
+    <a href="#TOP"><span>▲ TOP ▲ </span></a>
+    <a href="#TOP"><span>▲ TOP ▲ </span></a>
+    <a href="#TOP"><span>▲ TOP ▲ </span></a>
+    <a href="#TOP"><span>▲ TOP ▲ </span></a>
+    <a href="#TOP"><span>▲ TOP ▲ </span></a>
+    <a href="#TOP"><span>▲ TOP ▲ </span></a>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> 타이틀</title>
+    <!-- ●external 방식:HTML 문서밖에서 별도의 CSS문서 -->
+
+    <!-- 아래는 로컬컴퓨터에 저장한 c_css01_p190.css파일을 연결 -->
+    <link rel="stylesheet" href="/CSS/c_css01_p190.css">
+
+    <!-- 아래는 크로스브라우징을 위한 normalize.min.css 파일을 CDN 방식으로 연결 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    
+    <style>
+      /* 선택자 * 은 모든 요소를 의미 */
+      *{margin:5px;}     /*margin: 테두리밖 여백*/
+      /* ●internal 방식: HTML문서안의 HEAD 요소에 STYLE선언 */
+      dt {background-color: gold;}
+      dd {color: goldenrod;}
+    </style>
+  
+
+
+
+  </head>
+  <body>
+    <!--  ●inline방식:특성요소에 STYLE속성을 이용
+        -문법 <태그명 style="속성명:값; css속성명:값;"></태그명>-->
+      <dl style="border-style: solid; border: width 10px; border-radius:10px;">
+        <dt>css</dt>
+        <dd>Cascading Style sheet. 웹문서 서식</dd>
+        <dt>Cascading</dt>
+        <dd>선택자에 적용된 많은 스타일 중에 어떤 스타일을 나타낼지를 결정함을 뜻함</dd>
+      </dl>
+      
+      <hr>
+      <h4>스타일 우선순위</h4>
+      <div>1. 사용자 스타일 시트가 최우선</div>
+      <div>2. !important가 붙은 스타일</div>
+      <div>3. 개발자(웹개발자,디자이너) 정의 일반 스타일(제일 많이 사용)</div>
+      <div>4. 기본적인 브라우저 스타일 시트</div>
+      -> 브라우저마다 각기 다른 default 스타일은 
+      normalize.css 파일 or reset200802.css 
+      파일등을 이용하여 평준화 또는 초기화할 수 있다.
+      
+    
+      <hr>
+    <h2>CSS의 선언방식 3가지</h2>
+    <xmp>
+    <ul>
+      <li>●internal 방식: HTML문서안의 HEAD 요소에 STYLE선언</li>
+          -문법
+          <head>
+            <style>
+             선택자 {css속성명:값; css속성명:값;}
+            </style>
+          </head>
+
+
+
+      <li>●external 방식:HTML 문서밖에서 별도의 CSS문서</li>
+          -문법
+          <head>
+           <link rel="stylesheet" href="경로/파일명.css">
+          </head>
+
+
+
+
+      <li>●inline방식:특성요소에 STYLE속성을 이용
+        -문법 <태그명 style="속성명:값; css속성명:값;"></태그명>
+      </li>
+    </ul>
+  </xmp>
+  </body>
+</html>
