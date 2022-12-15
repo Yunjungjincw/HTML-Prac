@@ -5,38 +5,25 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Javascript 선언</title>
+		<!-- http://localhost:8088/pro1/j_js01.jsp -->
+	 <script src="./js/first.js"></script>
 	<script>
 			alert('head 태그안의 script-internal 방식');
+			
 	</script>
-	</head>
+	</head> 
 <body>
-
-
-	<div id="i1"></div>
+	<div id="i1">이건 internal 방식</div>
 	
-		<script>
-		//스크립트 한 줄 주석문
-		/*스크립트 다중 주석문
-			id가 i1인 요소 내부에 text를 출력*/
-			
-			
-			//document객체.속성명 = 값
-			//object HTMLDivElement
-			//document.getElementById("id");
-			//id가 i1 인 요소 내부 = 'body 태그안의 스크립으 - internal 방식';
-			//window.alert('body 태그안의 script-internal 방식');
-			
-			//document.getElementById("i1").id id가 i1인 요소의 id속성의 값을 가져옴
-			//window.alert(document.getElementById("i1").id); //[object HTMLDivElement]
-			
-			//id가 i1인 요소 내부의 text 값을 가져온다.
-			//window.alert(document.getElementById("i1").innerText);
-			
-			
-			 document.getElementById("i1").innerText='이게머지ㅇㅇ'
+	<script>
 
-			</script>
+			window.alert(document.getElementById("i1").id);
+			
+	
+			//id가 i1 인 요소 내부 = 'body 태그안의 스크립트 - internal 방식';
+			// document.getElementById("i1").innerText='이것은 internal 방식'
 
+	</script>
 
 
 <hr/>
@@ -102,6 +89,29 @@
 			 
 			 document.getElementById("i1").innerText //(여기에서는 ) HTML div요소의 innerText속성값 가져오기
 			 document.getElementById("i1").innerText='블러브럴'; // //(여기에서는 ) HTML div요소의 innerText속성값을 블러브럴 설정
-			 document.getElementById("i1"); //document 객체의 getElementById() 메서드 호출--%>
+			 document.getElementById("i1"); //document 객체의 getElementById() 메서드 호출
+			 
+			 
+			 ----------------------------------------------------------------------
+			 
+			 //스크립트 한 줄 주석문
+			/*스크립트 다중 주석문
+			id가 i1인 요소 내부에 text를 출력*/
+			
+			
+			//document객체.속성명 = 값
+			//object HTMLDivElement
+			//document.getElementById("id");
+			//id가 i1 인 요소 내부 = 'body 태그안의 스크립으 - internal 방식';
+			//window.alert('body 태그안의 script-internal 방식');
+			
+			//document.getElementById("i1").id id가 i1인 요소의 id속성의 값을 가져옴
+			//window.alert(document.getElementById("i1").id); //[object HTMLDivElement]
+			
+			//id가 i1인 요소 내부의 text 값을 가져온다.
+			//window.alert(document.getElementById("i1").innerText);
+			 
+			 
+			 --%>
 </body>
 </html>
