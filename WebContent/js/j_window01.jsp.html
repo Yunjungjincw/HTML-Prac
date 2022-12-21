@@ -6,15 +6,39 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <meta charset="UTF-8">
   <title>window 객체</title>
+  <script>
+  //confirm
+  function f_confirm(){
+	  //alert("f_confirm()호출 성공");
+	  //확인을 선택하면 true리턴, 취소 선택시 false리턴
+	  // id가 result인 요소내부에 출력
+	  let r = confirm('성인입니까?');
+	  window.document.getElementById("result").innerHTML = r;
+  }
+  
+  //prompt
+  function f_prompt(){
+	  console.log("f_prompt() ");
+	  prompt('나이를 숫자로 입력하세요');
+  }
+  </script>
 </head>
 <body>
   <h2>window 객체</h2>
-  <pre>
-  	window 객체는 BOM (B O M)
-  </pre>
   <hr>
+  <div id="result"></div>
   <button type="button" onclick="alert('경고 매세지 전달');">alert()</button>
-  <button type="button" onclick="confirm('성인입니까?')">confirm()</button>
-  <button type="button" onclick="prompt('나이를 숫자로 입력하세요')">prompt()</button>
+  <button type="button" onclick="f_confirm();">confirm()</button>
+  <button type="button" onclick="f_prompt();">prompt()</button>
+  <pre>
+  	window 객체는 BOM (Browser Object Model)에서 가장 최상위 객체.
+  	window.alert(); 해야지만 생략해서 alert(); 해도 동일한 의미.
+  	window.하위객체
+  	예)window.location
+  	window.history
+  	window.document
+  	window.document.forms
+  	window.document.forms[].text
+  </pre>
 </body>
 </html>
