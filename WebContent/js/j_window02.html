@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+ 		let win; //미리 선언해서 아래에서 사용함.
+  	//새창열기
+  	function openWin(){
+	  //window.open("https://www.naver.com/"); // 새window 객체 생성
+	  //window.open("j_Sring.jsp"); // "" 안에 주소,문서 주소를 넣어주면 해당 주소로 이동됨
+	  win = window.open("j_Sring.jsp","nw","width=50, height=50"); //부여한 창을 타겟으로해서 새로운 문서를 계속 주는 것임. 새로운 창을 띄우는게 아님.
+ 		 }	//생성한 객체를 변수에 넣어줌 .왜 ?
+ 				 
+ 		
+ 		//창 닫기
+ 		function closeSelfWin(){
+ 			 self.close();
+ 		 }
+ 		//자식 창 닫기  //win = window.open("j_Sring.jsp","nw","width=50, height=50"); 
+ 		// let win; 선언해놨으니까 
+ 		function closeWin(){
+ 			win.close();
+ 		}
+ 				 
+ 				 
+ 				 
+		function f_resizeTo(){
+	  win.resizeTo(100,100);
+  	}
+		function f_resizeBy(){
+			  win.resizeBy(100,100);
+		  }
+		
+		
+		
+		function f_moveTo(){win.moveTo(100,100);}
+		
+		
+		
+		//매개변수에는 숫자가 저장
+		// 매개변수로 문자, 정수 모두 받을 수 있음. +형변환 : 문자, 정수 모두 가능
+		
+		//매개변수 dir에는 object HTMLButtonElement
+		// dir.type => 매개변수 dir에 저장도 HTMLButtonElement의 type 속성의 값을 가져오기 
+		function f_moveBy1(dir){
+			alert(dir.id);
+			//객체를 가져오기 때문에. 그 객체의 데이터를 가져오기 위해서 .id 를 통해서 id 값을 가져옴
+			switch (dir.id) {
+			  case 'up':
+				  win.moveBy(0,-100);
+			    break;
+			  case 'down':
+				  win.moveBy(0,100);
+			    break;
+			  case 'left':
+				  win.moveBy(-100,0);
+			    break;
+			  case 'right':
+				  win.moveBy(100,0);
+			    break;
+			}
+		} 
+  </script>
+</head>
+<body>
+  <h2>window 객체</h2>
+  <button type="button" onclick="openWin()">새창열기</button>
+  <button type="button" onclick="closeSelfWin()">새창닫기</button>
+  <button type="button" onclick="closeWin()">자식창닫기</button>
+  <button type="button" onclick="f_moveTo();">moveTo(100,100)</button>  
+  <button type="button" onclick="f_moveBy1(this);" id="up">위로</button>
+  <button type="button" onclick="f_moveBy1(this);" id="down">아래</button>
+  <button type="button" onclick="f_moveBy1(this);" id="right">오른쪽</button>
+  <button type="button" onclick="f_moveBy1(this);" id="left">왼쪽</button>
+  
+  
+  <br>
+  <button type="button" onclick="f_resizeTo(100,100);">resizeTo</button>
+  <button type="button" onclick="f_resizeBy(100,100);">resizeBy</button>
+  <hr>
+  <pre>
+		window.resizeTo(x,y) : 절대좌표로 크기조절 : 절대사이즈
+  	window.resizeBy(x,y) : 상대좌표로 크기조절 : 상대사이즈. 기존크기에 대하여 ()안에 수치 만큼 증가
+  	<!-- window.resizeBy(100,100) => 100,100주면 = (200,200) -->
+  	
+		window.moveTo(x,y) : 절대좌표로 이동 ( 지정된 위치로 이동)
+  	window.moveBy(x,y) : 상대좌표로 이동  ( 현대 위치를 기준으로 이동)
+  	up:win.moveBy(0,-100);
+		down:win.moveBy(0,100);
+		left: win.moveBy(-100,0);
+		right:win.moveBy(100,0);
+			
+		
+		
+		
+		★this=> 여기에서는 이벤트가 발생한 객체를 의미.
+  </pre>
+</body>
+</html>
