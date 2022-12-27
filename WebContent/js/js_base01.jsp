@@ -10,9 +10,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 <style>
 </style>
-<script>
+ <style>
+</style>
+  
+  <title>Document</title>
+  <script>
+	$(document).ready(function(){
+		alert('jquey연결성공');
+	});//
 </script>
-
 </head>
 
 <body>
